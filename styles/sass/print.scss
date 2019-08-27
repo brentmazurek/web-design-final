@@ -1,0 +1,63 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@media print{
+.desktop-nav, .mobile-nav, .footer, .rslides, .hero-image, .view-more-arrow, .view-more-info-arrow{
+     display:none;   
+}
+    h1,h2,h3,h4,p,a{
+    color:black;    
+}
+    .rslides_tabs{
+         display:none;   
+    }
+}
+.callout{
+   
+    @media print{
+        width:100%; 
+        max-width:none;
+        overflow:auto;
+    }
+    
+
+}
+.callout__left{
+
+    @media print{
+        width:48%;
+        margin: 0 20px 20px 0;
+        width:48%;
+        float:left;
+    }
+  
+}
+.callout__right{
+    
+    @media print{
+        width:48%;
+        float:left;
+        margin-bottom:20px;
+    }
+  
+}
+.callout__link{
+  
+        
+        @media print{
+            width:100%;
+            clear:both;
+            &:hover{
+                background-color:#efefef;   
+            }
+        }
+        
+        @media print{
+            float:left;
+            width:48%;
+            clear:none;
+            margin:0;
+        }
+    
+}

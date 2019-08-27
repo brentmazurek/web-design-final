@@ -1,0 +1,374 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+/***********************
+VARIABLES
+***********************/
+$red: #ff3737;
+$pink: #FF5C5C;
+$link: #FF4343;
+$darkgreen: #0BB23A;
+$lightgreen: #43FF78;
+$yellow: #FFFD5C;
+$lightblue: #218ACC;
+$darkblue: #267CB2;
+$white: #efefef;
+
+/*  page size variables  */
+$screen-small: 750px;
+$screen-large: 960px;
+
+/***********************
+PRIMARY STYLES
+***********************/
+body{
+	background-color:$lightgreen;
+	background-image:url("../../images/congruent_pentagon.png");
+}
+h1, h2, h3, h4{
+    font-family: 'Arya', sans-serif;
+}
+h1{
+	color:$darkblue;
+    font-size:2.75em;
+}
+h2{
+	color:$lightblue;
+    font-size:2.25em;
+}
+h3{
+	color:$darkgreen;
+    font-size:1.75em;
+}
+h4{
+	color:#000;
+    font-size:1.5em;
+}
+p{
+	color:#333;
+    font-family: 'Questrial', sans-serif;
+    line-height:22px;
+}
+a{
+    text-decoration:none;  
+    font-family: 'Questrial', sans-serif;
+}
+li{
+    font-family: 'Questrial', sans-serif;    
+}
+.wrapper{
+	width:100%;
+    background-color:#fff;
+    
+    @media screen and (min-width: $screen-large){
+        width:960px;
+        margin: 0 auto;
+    }
+}
+
+/**********************
+NAVIGATION
+**********************/
+.desktop-nav{
+	width:100%;
+    background-color:$darkblue;
+    overflow: auto;
+    font-family: 'Arya', sans-serif;
+    
+    .nav__item{
+        float:left;
+        width:16.66%;
+        text-align:center;
+        
+        .nav__link{
+            display:block;
+            padding:15px;
+            background-color:$darkblue;
+            color:$white;
+            
+            &:hover{
+                background-color:$lightblue;   
+            }
+        }
+    }
+    
+	display:none;
+    
+    @media screen and (min-width: $screen-large){
+         display:block;   
+    }
+}
+.mobile-nav{
+	width:100%;
+	background-color:$darkblue;
+    font-family: 'Arya', sans-serif;
+	
+	.mobile-nav__btn{
+		text-align:center;
+		padding:25px 0;
+		display:block;
+		color:white;
+	}
+	.mobile-nav__list{
+		display:none;
+	}
+	.mobile-nav__item{
+		text-align:center;
+		background-color:$lightblue;
+		margin:2px 0;
+        color:$white;
+	}
+	.mobile-nav__link{
+		display: block;
+    	padding: 15px 0;
+    	color: white;
+	}
+    
+    @media screen and (min-width: $screen-large){
+         display:none;   
+    }
+}
+
+/*********************
+RS SLIDER
+*********************/
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+.rslides_tabs{
+    background-color:#efefef;  
+    overflow:auto;
+    
+    li{
+        float:left;
+        width:25%;
+        text-align:center;
+        
+        a{
+            padding:5px 0;
+            display:block;
+            
+            &:hover{
+                background-color:#e8e8e8;   
+            }
+        }
+    }
+}
+
+
+/*******************
+REUSEABLE PAGE STYLES
+*******************/
+.main{
+     width:90%;
+    margin:0 auto;
+}
+.intro-section{
+    text-align:center;
+    margin:40px auto;
+    max-width:675px;
+    
+    .intro__header{
+         margin-bottom:15px;   
+    }
+    h2{
+         margin-bottom:10px;   
+    }
+}
+.footer{
+     background-color:$darkblue;
+    color:$white;
+    padding:25px 0;
+    text-align:center;
+    
+    @media screen and (min-width: $screen-large){
+        padding: 35px 0 20px;
+        overflow:auto;
+    }
+    
+    h4{
+        color:$white;
+    }
+    p{
+         color:$white;   
+    }
+    
+    .footer__left{
+        margin-bottom:15px;
+        
+        @media screen and (min-width: $screen-large){
+            float:left;
+            width:50%;
+        }
+    }
+    .footer__right{
+         
+        @media screen and (min-width: $screen-large){
+             float:left;
+            width:50%;
+        }
+    }
+}
+
+/*******************
+HOMEPAGE
+*******************/
+.view-more-arrow{
+    width:100%;
+    height:auto;
+    max-width:675px;
+    margin: 0 auto 80px auto;
+    
+    a{
+        display:block;
+        
+        img{
+            width:100%;
+            height: auto;
+        }
+    }
+}
+.callout{
+    max-width:500px;
+    margin:0 auto 20px;
+    padding-bottom:20px;
+    border-bottom:1px solid #999;
+    
+    @media screen and (min-width: $screen-small){
+        width:100%; 
+        max-width:none;
+        overflow:auto;
+    }
+    
+    &:last-child{
+        border-bottom:none;
+        padding:0;
+    }
+    
+    li{
+        list-style:initial;
+        margin-left:20px;
+    }
+}
+.callout__left{
+    max-width:360px;
+    margin: 0 auto 15px auto;
+    
+    @media screen and (min-width: $screen-small){
+        width:48%;
+        margin: 0 20px 20px 0;
+        width:48%;
+        float:left;
+    }
+    
+    img{
+        width:100%;
+        height:auto;
+    }
+}
+.callout__right{
+    
+    @media screen and (min-width: $screen-small){
+        width:48%;
+        float:left;
+        margin-bottom:20px;
+    }
+    
+    h3{
+        margin-bottom:10px;   
+    }
+}
+.callout__link{
+    
+    a{
+        border-radius:5px;
+        display:block;
+        width:90%;
+        background-color:$red;
+        color:$yellow;
+        margin:20px auto 0;
+        padding:20px 0;
+        text-align:center;
+        clear:both;
+        
+        @media screen and (min-width: $screen-small){
+            width:100%;
+            clear:both;
+            &:hover{
+                background-color:$pink;   
+            }
+        }
+        
+        @media screen and (min-width: $screen-large){
+            float:left;
+            width:48%;
+            clear:none;
+            margin:0;
+        }
+    }
+}
+
+/*******************
+PRODUCT PAGE
+*******************/
+.hero-image{
+    height:150px;
+    width:100%;
+    background-image:url("../../images/banner.jpg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:left bottom;
+    background-color:$red;
+}
+
+.form{
+    margin:0 auto;
+    width:60%;
+    text-align:center;
+    background-color:#efefef;
+    padding:20px;
+    
+    .submit{
+         text-align:center;
+        margin:0 auto;
+    }
+    .form__intro{
+         text-align:center;   
+    }
+    
+    @media screen and (min-width:$screen-large){
+         width:42%;   
+    }
+}

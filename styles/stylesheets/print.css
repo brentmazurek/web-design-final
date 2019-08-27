@@ -1,0 +1,67 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@media print {
+  /* line 6, ../sass/print.scss */
+  .desktop-nav, .mobile-nav, .footer, .rslides, .hero-image, .view-more-arrow, .view-more-info-arrow {
+    display: none;
+  }
+
+  /* line 9, ../sass/print.scss */
+  h1, h2, h3, h4, p, a {
+    color: black;
+  }
+
+  /* line 12, ../sass/print.scss */
+  .rslides_tabs {
+    display: none;
+  }
+}
+@media print {
+  /* line 16, ../sass/print.scss */
+  .callout {
+    width: 100%;
+    max-width: none;
+    overflow: auto;
+  }
+}
+
+@media print {
+  /* line 26, ../sass/print.scss */
+  .callout__left {
+    width: 48%;
+    margin: 0 20px 20px 0;
+    width: 48%;
+    float: left;
+  }
+}
+
+@media print {
+  /* line 36, ../sass/print.scss */
+  .callout__right {
+    width: 48%;
+    float: left;
+    margin-bottom: 20px;
+  }
+}
+
+@media print {
+  /* line 45, ../sass/print.scss */
+  .callout__link {
+    width: 100%;
+    clear: both;
+  }
+  /* line 51, ../sass/print.scss */
+  .callout__link:hover {
+    background-color: #efefef;
+  }
+}
+@media print {
+  /* line 45, ../sass/print.scss */
+  .callout__link {
+    float: left;
+    width: 48%;
+    clear: none;
+    margin: 0;
+  }
+}
